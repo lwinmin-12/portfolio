@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .btn{
+        @apply bg-green-500 active:bg-green-300 text-white rounded flex justify-center items-center
+    }
+    .OBtn{
+        @apply px-6 py-2  z-10 overflow-hidden after:duration-300 rounded border-2 border-green-500 text-green-500 hover:text-white after:w-[45%] after:h-[110%] after:bg-green-500 relative after:absolute after:rounded-[50px] after:bottom-[45px] after:left-[30px] hover:after:scale-[6] after:-z-[1] active:after:bg-white active:text-green-600 hover:outline-none;
+    }
+}
+.ani{
+    animation-name: upDown ;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes upDown {
+    0%   {transform: translateY(-40px);}
+    100%   {transform: translateY(-20px)}
+}

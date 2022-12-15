@@ -8,7 +8,7 @@ import Typed from "react-typed";
 const Home = () => {
   return (
     <>
-      <div className=" flex relative justify-between h-[100vh]">
+      <div className="w-[80%] mx-auto flex relative justify-between h-[100vh]">
         <div className="w-[50%] flex items-center">
           <div className=" w-[100%]">
             <div className="mb-4">

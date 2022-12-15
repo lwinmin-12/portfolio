@@ -3,7 +3,7 @@ import Lottie from "lottie-react";
 import AboutHi from "../Animation/AboutHi.json";
 const AboutMe = () => {
   const [aboutContact, setAboutContact] = useState([
-    { 
+    {
       id: 1,
       head: "Who am i ?",
       contact: `I'm Lwin Min Oo, 21 years old. I started learning programming at
@@ -12,25 +12,23 @@ const AboutMe = () => {
       it's my destiny to make a career in programming. My goal is to
       become a fullstack developer in web development.`,
     },
-    { 
+    {
       id: 2,
       head: "Education.",
       contact: `I am a third-year physics student at Yadanabon University I
       dropped out of Yadanarbon University in early 2021. And then I
       attended courses at MMS IT and entered the web development field.`,
     },
-    { 
+    {
       id: 3,
       head: "Work Experience.",
-      contact: `I am a third-year physics student at Yadanabon University I
-      dropped out of Yadanarbon University in early 2021. And then I
-      attended courses at MMS IT and entered the web development field.`,
+      contact: `I had studied and made practiced consistently for about 6 months as a frontend developer. And I created dynamic web pages and web apps collaborating with another backend development team.`,
     },
   ]);
   return (
-    <div className=" flex flex-col justify-center">
+    <div className=" w-[80%]  flex flex-col mx-auto mt-16  mb-20">
       <div className="mx-auto w-[15%] text-center">
-        <h1 className="text-[22px] border-b-2 py-3 font-bold my-10">
+        <h1 className="text-[22px] border-b-2 pb-3 font-bold mb-10">
           About Me
         </h1>
         {/* <p className="text-gray-500">Lorem ipsum dolor sit amet consectetur</p> */}
@@ -38,13 +36,13 @@ const AboutMe = () => {
       <div className=" flex justify-center">
         <div className="w-[50%]  flex justify-center items-center">
           <Lottie
-            className="w-full bg-white"
+            className="w-full"
             animationData={AboutHi}
             loop={true}
             autoPlay={true}
           />
         </div>
-        <div className="w-[50%] bg-white flex flex-col justify-center space-y-6 ">
+        <div className="w-[50%] flex flex-col justify-center space-y-6 ">
           <div className="space-y-1">
             <h3 className="text-[30px] text-green-500">Who am i?</h3>
             <p className="text-[14px] text-gray-500">
@@ -66,15 +64,14 @@ const AboutMe = () => {
           <div className="space-y-1">
             <h3 className="text-[30px] text-green-500">Work Experience</h3>
             <p className="text-[14px] text-gray-500">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
-              corporis nam dicta fuga alias ullam illum possimus modi odio esse,
-              sapiente veritatis ipsum reprehenderit aspernatur architecto
-              voluptatum explicabo delectus libero.
+              I had studied and made practiced consistently for about 6 months
+              as a frontend developer. And I created dynamic web pages and web
+              apps collaborating with another backend development team.
             </p>
           </div>
           <div className="flex space-x-4 py-5 text-sm">
             <button className="btn px-6 py-2">View Certificate</button>
-            <button className="OBtn">download Cv</button>
+            <button className="OBtn px-6 py-2">download Cv</button>
           </div>
         </div>
       </div>

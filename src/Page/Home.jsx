@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Lottie from "lottie-react";
 import HomeAnimation from "../Animation/HomeAnimation.json";
 import { SlMouse } from "react-icons/sl";
 import { BiChevronsDown } from "react-icons/bi";
 import Typed from "react-typed";
+import { Colect } from "../store/Collection";
 
 const Home = () => {
+  const { homeRef } = useContext(Colect);
+  const { handleScroll, contactRef, aboutmeRef } = useContext(Colect);
+
   return (
     <>
-      <div className="w-[80%] mx-auto flex relative justify-between h-[100vh]">
+      <div
+        ref={homeRef}
+        className="w-[80%] mx-auto flex relative justify-between h-[100vh]"
+      >
         <div className="w-[50%] flex items-center">
           <div className=" w-[100%]">
             <div className="mb-4">
@@ -35,7 +42,12 @@ const Home = () => {
                 </p>
                 <p></p>
               </div>
-              <button className="btn px-5 py-2.5">Contact me!</button>
+              <button
+                onClick={() => handleScroll(contactRef)}
+                className="btn px-5 py-2.5"
+              >
+                Contact me!
+              </button>
             </div>
           </div>
         </div>
@@ -43,7 +55,10 @@ const Home = () => {
           <Lottie animationData={HomeAnimation} loop={true} autoPlay={true} />
         </div>
         <div className="w-full absolute bottom-0 flex justify-center">
-          <div className="ani hover:text-green-500">
+          <div
+            onClick={() => handleScroll(aboutmeRef)}
+            className="ani hover:text-green-500"
+          >
             <SlMouse className="text-2xl" />
             <BiChevronsDown className="text-2xl" />
           </div>

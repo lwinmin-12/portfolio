@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Navbar } from "./component";
-import { AboutMe, Home, Technology ,Project} from "./Page";
-
+import { AboutMe, Home, Technology, Project, Contact, Footer } from "./Page";
+import Collection from "./store/Collection";
 const App = () => {
   return (
-    <div className=" relative">
-      <Navbar />
-      <Home />
-      <AboutMe />
-      <Technology/>
-      <Project/>
-    </div>
+    <Collection>
+      <div className=" relative">
+        <Navbar />
+        <Home />
+        <AboutMe />
+        <Technology />
+        <Project />
+        <Contact />
+        <Footer />
+      </div>
+    </Collection>
   );
 };
 
 export default App;
+{
+  /* <Navbar />
+      <Home />
+      <AboutMe />
+      <Technology />
+      <Project />
+      <Contact />
+      <Footer /> */
+}

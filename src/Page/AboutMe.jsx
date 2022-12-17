@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Lottie from "lottie-react";
 import AboutHi from "../Animation/AboutHi.json";
+import { Colect } from "../store/Collection";
 const AboutMe = () => {
   const [aboutContact, setAboutContact] = useState([
     {
@@ -25,10 +26,11 @@ const AboutMe = () => {
       contact: `I had studied and made practiced consistently for about 6 months as a frontend developer. And I created dynamic web pages and web apps collaborating with another backend development team.`,
     },
   ]);
+  const { aboutmeRef } = useContext(Colect);
   return (
-    <div className=" w-[80%]  flex flex-col mx-auto mt-16  mb-20">
+    <div ref={aboutmeRef} className=" w-[80%]  flex flex-col justify-center mx-auto h-[100vh]">
       <div className="mx-auto w-[15%] text-center">
-        <h1 className="text-[22px] border-b-2 pb-3 font-bold mb-10">
+        <h1 className="text-[22px] border-b-2 border-green-500 pb-3 font-bold mb-10">
           About Me
         </h1>
         {/* <p className="text-gray-500">Lorem ipsum dolor sit amet consectetur</p> */}

@@ -10,11 +10,15 @@ const Collection = ({ children }) => {
   const contactRef = useRef();
 
   const handleScroll = (element) => {
-    console.log(element);
-    window.scrollTo({
-      top: element.current.offsetTop,
-      behavior: "smooth"
-    });
+    element == techRef
+      ? window.scrollTo({
+          top: element.current.offsetTop-200,
+          behavior: "smooth",
+        })
+      : window.scrollTo({
+          top: element.current.offsetTop,
+          behavior: "smooth",
+        });
   };
   const value = {
     homeRef,

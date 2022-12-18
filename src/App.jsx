@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Navbar } from "./component";
-import { AboutMe, Home, Technology, Project, Contact, Footer } from "./Page";
+import { AboutMe, Home, Skill, Project, Contact, Footer } from "./Page";
 import Collection from "./store/Collection";
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
         <Navbar />
         <Home />
         <AboutMe />
-        <Technology />
+        <Skill />
         <Project />
         <Contact />
         <Footer />

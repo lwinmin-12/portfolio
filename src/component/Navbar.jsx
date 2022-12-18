@@ -18,7 +18,7 @@ const Navbar = () => {
     },
     {
       ref: techRef,
-      name: "Technology",
+      name: "Skill",
       con: false,
     },
     {

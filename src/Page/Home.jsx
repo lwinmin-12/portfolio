@@ -35,10 +35,10 @@ const Home = () => {
             <div className="space-y-7 w-[90%]">
               <div className="text-gray-500">
                 <p>
-                  I'm a Frontend Developer and Ui,Ux Desinger from Mandalay but
-                  currently base in Yangon Myanmar.I create custom websites to
-                  help businesses do better online. Welcome to my corner of the
-                  internet.I'm glade you're here!
+                  I'm a Frontend Developer and Ui, Ux Designer from Mandalay and
+                  currently based in Yangon, Myanmar. I have created custom websites to
+                  help businesses to be better online. Welcome to my corner of the
+                  internet. I'm glad you're here!
                 </p>
                 <p></p>
               </div>

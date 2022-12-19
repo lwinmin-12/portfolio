@@ -15,7 +15,7 @@ const Project = () => {
       image: ecommerce,
       title: "Ecommerce Project",
       info: "Manage website appearance, as well as manage the state globally using Contact API.",
-      live: "https://shop-mine.netlify.app",
+      live: "https://lmo-ecommerce.netlify.app/",
       gitLink: "https://github.com/lwinmin-12/e-commerce",
     },
     {
@@ -46,7 +46,7 @@ const Project = () => {
         </div>
         <Waypoint onEnter={() => handleCheck(3)} />
 
-        <div className="flex flex-wrap justify-center w-full">
+        <div className="flex flex-wrap justify-center w-full !mx-0">
           {cardDatail.map((ea) => (
             <div
               key={ea.id}

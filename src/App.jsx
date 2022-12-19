@@ -1,20 +1,23 @@
-import React, { useRef } from "react";
-import { Navbar } from "./component";
+import React, { useContext } from "react";
+import { MoblieMenu, Navbar } from "./component";
 import { AboutMe, Home, Skill, Project, Contact, Footer } from "./Page";
-import Collection from "./store/Collection";
+import { Colect } from "./store/Collection";
 const App = () => {
+  const { showMenu } = useContext(Colect);
+  console.log(showMenu);
   return (
-    <Collection>
-      <div className=" relative">
-        <Navbar />
-        <Home />
-        <AboutMe />
-        <Skill />
-        <Project />
-        <Contact />
-        <Footer />
-      </div>
-    </Collection>
+    <div className="overflow-hidden relative">
+      <Navbar />
+       {
+        showMenu && <MoblieMenu/>
+       }
+      <Home />
+      <AboutMe />
+      <Skill />
+      <Project />
+      <Contact />
+      <Footer />
+    </div>
   );
 };
 

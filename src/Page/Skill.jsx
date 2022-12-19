@@ -1,8 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Colect } from "../store/Collection";
+// importing aos
+import AOS from "aos";
+import "aos/dist/aos.css";
+//waypoint
+import { Waypoint } from "react-waypoint";
+//counterup
+import CountUp from "react-countup";
 
 const Skill = () => {
-  const { techRef } = useContext(Colect);
+  const [condition, setCondition] = useState(false);
+
+  const { techRef, handleCheck } = useContext(Colect);
   const [skill, setSkill] = useState([
     {
       id: 1,
@@ -41,32 +50,53 @@ const Skill = () => {
       class: "w-[60%]",
     },
   ]);
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+    });
+  }, []);
   return (
     <div
       ref={techRef}
-      className="w-[80%]  bg-green-100 mx-auto py-10 flex flex-col justify-center items-center"
+      className="lg:w-[80%] w-[90%]  bg-green-100 mx-auto py-10 flex flex-col justify-center items-center"
     >
-      <h1 className="text-[22px] border-b-2 border-green-500 pb-3 ">
+      <h1
+        data-aos="fade-up"
+        className="text-[22px] border-b-2 border-green-500 pb-3 "
+      >
         What I do
       </h1>
-      <p className="w-[40%] text-center text-gray-500 mt-5 mb-10">
+      <p
+        data-aos="fade-up"
+        className="md:w-[40%] w-[60%] text-center text-gray-500 mt-5 mb-10"
+      >
         I have completed a six-month internship as a front-end developer at
         Local Base It Company.
       </p>
+      {/* <Waypoint onEnter={() => } /> */}
+
+      <Waypoint
+        onEnter={() => {
+          setCondition(true), handleCheck(2);
+        }}
+        onLeave={() => setCondition(false)}
+      />
       <div className="w-full flex-wrap flex justify-evenly ">
         {skill.map((ea) => (
-          <div key={ea.id} className="w-[40%] my-5 ">
+          <div key={ea.id} className="md:w-[40%] w-[90%] my-5 ">
             <div className="flex justify-between mb-1">
               <span className="text-base font-medium text-black dark:text-white">
                 {ea.name}
               </span>
               <span className="text-sm font-medium text-black dark:text-white">
-                {ea.per}%
+                {condition ? <CountUp end={ea.per} duration={1} /> : "0"}%
               </span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
               <div
-                className={`bg-green-500 h-2.5 rounded-full ${ea.class} `}
+                className={`bg-green-500 h-2.5 duration-1000 rounded-full ${
+                  condition ? ea.class : "w-[0%]"
+                } `}
               ></div>
             </div>
           </div>

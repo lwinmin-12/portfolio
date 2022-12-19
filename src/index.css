@@ -8,7 +8,7 @@
         @apply bg-green-500 active:bg-green-300 hover:bg-green-600 text-white rounded flex justify-center items-center
     }
     .OBtn{
-        @apply   z-10 overflow-hidden after:duration-300 rounded border border-green-500 text-green-500 hover:text-white after:w-[45%] after:h-[110%] after:bg-green-500 relative after:absolute after:rounded-[50px] after:bottom-[45px] after:left-[30px] hover:after:scale-[6] after:-z-[1] active:after:bg-white active:text-green-600 hover:outline-none;
+        @apply   z-10 overflow-hidden after:duration-300 rounded border border-green-500 text-green-500 hover:text-white after:w-[45%] after:h-[110%] after:bg-green-500 relative after:absolute after:rounded-[50px] after:bottom-[45px]  after:left-[30px] hover:after:scale-[6] after:-z-[1] active:after:bg-white active:text-green-600 hover:outline-none;
     }
 }
 .ani{
@@ -19,6 +19,6 @@
 }
 
 @keyframes upDown {
-    0%   {transform: translateY(-40px);}
-    100%   {transform: translateY(-20px)}
+    0%   {transform: translateY(-70px);}
+    100%   {transform: translateY(-50px)}
 }

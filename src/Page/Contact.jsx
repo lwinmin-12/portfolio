@@ -6,14 +6,16 @@ import {
   BsFacebook,
   BsInstagram,
   BsLinkedin,
-  BsWhatsapp,
+  BsGithub,
 } from "react-icons/bs";
 import { IoMailOutline, IoLocationOutline } from "react-icons/io5";
 import { FiSend } from "react-icons/fi";
 import { Colect } from "../store/Collection";
+//waypoint
+import { Waypoint } from "react-waypoint";
 
 const Contact = () => {
-  const {contactRef} = useContext(Colect)
+  const { contactRef, handleCheck } = useContext(Colect);
   const contactForm = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -37,10 +39,15 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <div ref={contactRef} id="contact" className="h-[90vh] flex items-center justify-center">
-      <div className="w-[80%] mx-auto  flex flex-col justify-center items-center">
-        <div className="flex w-full  ">
-          <div className="w-[50%] space-y-10">
+    <div
+      ref={contactRef}
+      id="contact"
+      className="lg:h-[90vh] flex items-center justify-center"
+    >
+      <Waypoint onEnter={() => handleCheck(4)} />
+      <div className="lg:w-[80%] w-[90%] mx-auto  flex flex-col justify-center items-center">
+        <div className="flex flex-col lg:flex-row w-full  ">
+          <div data-aos="fade-right" className="lg:w-[50%] w-full space-y-10">
             <div>
               <h1 className="text-[57px] text-green-500">Let's talk</h1>
               <p className="text-[22px]">Ask me anything or just say Hi</p>
@@ -64,17 +71,26 @@ const Contact = () => {
               </div>
             </div>
             <div className="text-[24px] flex space-x-8 text-gray-700">
-              <BsFacebook className="hover:text-green-500 " />
-              <BsInstagram className="hover:text-green-500 " />
-              <BsLinkedin className="hover:text-green-500 " />
-              <BsWhatsapp className="hover:text-green-500 " />
+              <a href="https://www.facebook.com/lwinminoo45/">
+                <BsFacebook className="active:text-green-300 hover:text-green-500" />
+              </a>
+              <a href="https://www.instagram.com/lmo.lwin/">
+                <BsInstagram className="active:text-green-300 hover:text-green-500 " />
+              </a>
+              <a href="https://www.linkedin.com/in/lwin-min-oo-119505236/">
+                <BsLinkedin className="active:text-green-300 hover:text-green-500 " />
+              </a>
+              <a href="https://github.com/lwinmin-12">
+                <BsGithub className="active:text-green-300 hover:text-green-500 " />
+              </a>
             </div>
           </div>
-          <div className="w-[50%] ">
+          <div className="lg:w-[50%] w-full my-10 lg:my-0 ">
             <form
+              data-aos="fade-left"
               ref={contactForm}
               onSubmit={sendEmail}
-              className="w-[80%] mx-auto space-y-5 shadow-lg rounded-lg p-5 border duration-300 hover:-translate-y-3 hover:shadow-2xl"
+              className="md:w-[80%]  mx-auto space-y-5 shadow-sm rounded-lg p-5 border !duration-300 hover:!-translate-y-3 hover:shadow-lg"
               action=""
             >
               <div className="text-[22px]">
@@ -131,7 +147,7 @@ const Contact = () => {
                   name="message"
                 ></textarea>
               </div>
-              <button className="btn px-5 py-2 space-x-2">
+              <button className="btn ml-auto px-5 py-2 space-x-2">
                 <span>Send</span>
                 <FiSend className="" />
               </button>

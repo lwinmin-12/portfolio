@@ -25,7 +25,7 @@ const Home = () => {
     <>
       <div
         ref={homeRef}
-        className="w-[90%] lg:w-[80%] md:mt-0  mx-auto flex flex-col-reverse md:flex-row  relative justify-between md:h-[100vh]"
+        className="w-[90%] lg:w-[80%] 2xl:w-[1320px] md:mt-0  mx-auto flex flex-col-reverse md:flex-row  relative justify-between md:h-[100vh]"
       >
         <div
           data-aos="fade-right"
@@ -60,7 +60,7 @@ const Home = () => {
                 onClick={() => handleScroll(contactRef)}
                 className="btn px-5 py-2.5"
               >
-                Contact me!
+                Contact me! 
               </button>
             </div>
           </div>

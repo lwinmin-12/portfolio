@@ -45,7 +45,7 @@ const Contact = () => {
       className="lg:h-[90vh] flex items-center justify-center"
     >
       <Waypoint onEnter={() => handleCheck(4)} />
-      <div className="lg:w-[80%] w-[90%] mx-auto  flex flex-col justify-center items-center">
+      <div className="lg:w-[80%] w-[90%] 2xl:w-[1320px] mx-auto  flex flex-col justify-center items-center">
         <div className="flex flex-col lg:flex-row w-full  ">
           <div data-aos="fade-right" className="lg:w-[50%] w-full space-y-10">
             <div>
@@ -105,14 +105,14 @@ const Contact = () => {
                 <input
                   type="text"
                   id="inputOne"
-                  className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-500 peer"
+                  className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-500 peer"
                   placeholder=" "
                   required
                   name="from_name"
                 />
                 <label
                   for="inputOne"
-                  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+                  className="absolute text-sm text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-2 peer-focus:px-2 peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
                 >
                   Name
                 </label>
@@ -121,7 +121,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="floating_outlined"
-                  className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-500 peer"
+                  className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-500 peer"
                   placeholder=" "
                   required
                   name="from_email"
@@ -129,19 +129,19 @@ const Contact = () => {
                 />
                 <label
                   for="floating_outlined"
-                  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-green-500 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+                  className="absolute text-sm text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
                 >
                   Email
                 </label>
               </div>
-              <div className=" bg-white rounded-t-lg dark:bg-gray-800">
+              <div className=" bg-white rounded-t-lg">
                 <label for="comment" className="sr-only">
                   Message
                 </label>
                 <textarea
                   id="comment"
                   rows="4"
-                  className="w-full max-h-[150px] rounded-t-lg p-2 text-sm border border-gray-300 focus:border-green-500  dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-500"
+                  className="w-full max-h-[150px] rounded-t-lg p-2 text-sm border border-gray-300 focus:border-green-500 focus:ring-0"
                   placeholder="Message..."
                   required
                   name="message"

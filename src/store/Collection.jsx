@@ -37,17 +37,17 @@ const Collection = ({ children }) => {
     },
     {
       ref: techRef,
-      name: "Skill",
+      name: "Skills",
       con: false,
     },
     {
       ref: projectRef,
-      name: "Project",
+      name: "Projects",
       con: false,
     },
     {
       ref: contactRef,
-      name: "Contact",
+      name: "Contact me!",
       con: false,
     },
   ]);

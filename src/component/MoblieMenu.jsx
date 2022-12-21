@@ -17,7 +17,7 @@ const MoblieMenu = () => {
             <MdClose onClick={handleShow} className="text-xl" />
           </div>
           {nav.map((ea, index) =>
-            ea.name != "Contact" ? (
+            ea.name != "Contact me!" ? (
               <li
                 onClick={() => {
                   handleScroll(ea.ref), handleCheck(index), handleShow();

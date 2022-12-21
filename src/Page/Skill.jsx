@@ -56,9 +56,10 @@ const Skill = () => {
     });
   }, []);
   return (
-    <div
+    <div className=" bg-green-100 w-full py-10">
+      <div
       ref={techRef}
-      className="lg:w-[80%] w-[90%]  bg-green-100 mx-auto py-10 flex flex-col justify-center items-center"
+      className="lg:w-[80%] w-[90%] 2xl:w-[1320px] mx-auto  flex flex-col justify-center items-center"
     >
       <h1
         data-aos="fade-up"
@@ -71,7 +72,7 @@ const Skill = () => {
         className="md:w-[40%] w-[60%] text-center text-gray-500 mt-5 mb-10"
       >
         I have completed a six-month internship as a front-end developer at
-        Local Base It Company.
+        Local Base IT Company.
       </p>
       {/* <Waypoint onEnter={() => } /> */}
 
@@ -85,14 +86,14 @@ const Skill = () => {
         {skill.map((ea) => (
           <div key={ea.id} className="md:w-[40%] w-[90%] my-5 ">
             <div className="flex justify-between mb-1">
-              <span className="text-base font-medium text-black dark:text-white">
+              <span className="text-base font-medium text-black">
                 {ea.name}
               </span>
-              <span className="text-sm font-medium text-black dark:text-white">
+              <span className="text-sm font-medium text-black ">
                 {condition ? <CountUp end={ea.per} duration={1} /> : "0"}%
               </span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div className="w-full bg-gray-200 rounded-full h-2.5">
               <div
                 className={`bg-green-500 h-2.5 duration-1000 rounded-full ${
                   condition ? ea.class : "w-[0%]"
@@ -102,6 +103,7 @@ const Skill = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

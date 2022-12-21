@@ -34,7 +34,7 @@ const AboutMe = () => {
   return (
     <div
       ref={aboutmeRef}
-      className=" lg:w-[80%] w-[90%]  flex flex-col justify-center mx-auto lg:h-[100vh]"
+      className=" lg:w-[80%] w-[90%] xl:w-[1320px]  flex flex-col justify-center mx-auto lg:h-[100vh]"
     >
       <Waypoint onEnter={() => handleCheck(1)} />
       <div
@@ -88,11 +88,11 @@ const AboutMe = () => {
           <div data-aos="fade-left" className="flex space-x-4 py-5 text-sm">
             <a
               href="https://drive.google.com/drive/folders/1y_IL7krTUqfYW04g94QGBrBT_0UUHE0U?usp=sharing"
-              className="btn px-6 py-2"
+              className="btn px-5 py-2.5"
             >
               View Certificate
             </a>
-            <a href={cvForm} className="OBtn px-6 py-2" download>
+            <a href={cvForm} className="OBtn px-5 py-2.5" download>
               download Cv
             </a>
           </div>

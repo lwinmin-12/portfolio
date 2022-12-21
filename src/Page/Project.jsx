@@ -38,7 +38,7 @@ const Project = () => {
   const { projectRef, handleCheck } = useContext(Colect);
   return (
     <div ref={projectRef} className="w-full bg-gray-50 ">
-      <div className="lg:w-[80%] w-[90%] mx-auto py-24 flex flex-col justify-center items-center  space-x-5 ">
+      <div className="lg:w-[80%] w-[90%] 2xl:w-[1320px] mx-auto py-24 flex flex-col justify-center items-center  space-x-5 ">
         <div className="lg:mb-20 mb-10">
           <h1 className="text-[22px] border-b-2 border-green-500 pb-3">
             Featured Project
@@ -51,7 +51,7 @@ const Project = () => {
             <div
               key={ea.id}
               data-aos="flip-left"
-              className="w-[400px] sm:w-[350px] mx-2 lg:mx-6 mb-2 group bg-white border overflow-hidden border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+              className="w-[400px] sm:w-[350px] mx-2 lg:mx-6 mb-2 group bg-white border overflow-hidden border-gray-200 rounded-lg shadow-md"
             >
               <img
                 className="rounded-t-lg duration-500 group-hover:scale-[1.1] "
@@ -60,11 +60,11 @@ const Project = () => {
               />
               <div className="p-5 space-y-5">
                 <a href="#">
-                  <h5 className="mb-2 text-[22px] font-medium tracking-tight text-gray-900 dark:text-white">
+                  <h5 className="mb-2 text-[22px] font-medium tracking-tight text-gray-900">
                     {ea.title}
                   </h5>
                 </a>
-                <p className="mb-3 text-[15px] font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 text-[15px] font-normal text-gray-700">
                   {ea.info}
                 </p>
                 <div className="flex space-x-5">

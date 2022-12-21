@@ -8,13 +8,13 @@ const Navbar = () => {
     useContext(Colect);
   return (
     <div className="bg-white w-full z-[50] fixed top-0">
-      <div className="lg:w-[80%] w-[90%] left-0 right-0 mx-auto  flex justify-between items-center py-4">
+      <div className="lg:w-[80%] 2xl:w-[1320px] w-[90%] left-0 right-0 mx-auto  flex justify-between items-center py-4">
         <div className="w-[15%] flex items-center">
           <img src={logo} alt="" />
         </div>
-        <ul className=" hidden sm:flex w-[70%] md:w-[50%] justify-between items-center text-sm">
+        <ul className=" hidden sm:flex w-[70%] md:w-[45%] justify-between items-center text-sm">
           {nav.map((ea, index) =>
-            ea.name != "Contact" ? (
+            ea.name != "Contact me!" ? (
               <li
                 onClick={() => {
                   handleScroll(ea.ref), handleCheck(index);
@@ -28,7 +28,7 @@ const Navbar = () => {
                 onClick={() => {
                   handleScroll(ea.ref), handleCheck(index);
                 }}
-                className=" w-[100px] h-[40px] btn cursor-pointer"
+                className=" px-5 py-2.5 btn cursor-pointer"
               >
                 {ea.name}
               </li>

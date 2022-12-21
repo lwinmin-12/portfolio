@@ -10,9 +10,7 @@
     .OBtn{
         @apply   z-10 overflow-hidden after:duration-300 rounded-lg border border-green-500 text-green-500 hover:text-white after:w-[45%] after:h-[110%] after:bg-green-500 relative after:absolute after:rounded-[50px] after:bottom-[45px]  after:left-[30px] hover:after:scale-[6] after:-z-[1] active:after:bg-white active:text-green-600 hover:outline-none;
     }
-    .box{
-        @apply lg:w-[1140px] 
-    }
+    
 }
 .ani{
     /* fill: transparent; */

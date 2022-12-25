@@ -41,7 +41,7 @@ const AboutMe = () => {
         // data-aos="fade-up"
         className="mx-auto lg:w-[15%] w-[35%] text-center"
       >
-        <h1 className="text-[22px] border-b-2 border-green-500 pb-3 font-bold lg:mb-10">
+        <h1 className="text-[22px] border-b-2 border-green-500 pb-3 font-bold lg:mb-4">
           About Me
         </h1>
         {/* <p className="text-gray-500">Lorem ipsum dolor sit amet consectetur</p> */}

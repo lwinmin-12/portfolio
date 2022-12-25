@@ -22,7 +22,7 @@ const Project = () => {
       id: 2,
       image: crypto,
       title: "Crypto Currency Exchange",
-      info: "Using coingecko Api and manage the state globally using reduxtool",
+      info: "Using coingecko Api and manage the state globally using redux-toolkit",
       live: "https://crypto-currency-exchange.netlify.app/",
       gitLink: "https://github.com/lwinmin-12/crypto.git",
     },

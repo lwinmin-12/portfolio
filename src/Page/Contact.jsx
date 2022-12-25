@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import {
@@ -13,8 +13,10 @@ import { FiSend } from "react-icons/fi";
 import { Colect } from "../store/Collection";
 //waypoint
 import { Waypoint } from "react-waypoint";
+import { Toast } from "../component";
 
 const Contact = () => {
+  const [senting, setSenting] = useState(false);
   const { contactRef, handleCheck } = useContext(Colect);
   const contactForm = useRef();
   const sendEmail = (e) => {
@@ -30,7 +32,10 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          console.log("message send");
+          result.text == "OK" && setSenting(true);
+          setTimeout(() => {
+            setSenting(false);
+          }, 5000);
         },
         (error) => {
           console.log(error.text);
@@ -38,12 +43,19 @@ const Contact = () => {
       );
     e.target.reset();
   };
+  console.log(senting);
   return (
     <div
       ref={contactRef}
       id="contact"
       className="lg:h-[90vh] flex items-center justify-center"
     >
+      {senting ? (
+        <Toast setSenting={setSenting} right={"right-2"} />
+      ) : (
+        <Toast setSenting={setSenting} right={"right-[-300px]"} />
+      )}
+
       <Waypoint onEnter={() => handleCheck(4)} />
       <div className="lg:w-[80%] w-[90%] 2xl:w-[1320px] mx-auto  flex flex-col justify-center items-center">
         <div className="flex flex-col lg:flex-row w-full  ">

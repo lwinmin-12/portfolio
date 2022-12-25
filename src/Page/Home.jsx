@@ -22,7 +22,7 @@ const Home = () => {
     });
   }, []);
   return (
-    <>
+    <>  
       <div
         ref={homeRef}
         className="w-[90%] lg:w-[80%] 2xl:w-[1320px] md:mt-0  mx-auto flex flex-col-reverse md:flex-row  relative justify-between md:h-[100vh]"

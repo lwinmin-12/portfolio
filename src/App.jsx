@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { MoblieMenu, Navbar } from "./component";
+import { MoblieMenu, Navbar, SideIcon } from "./component";
 import { AboutMe, Home, Skill, Project, Contact, Footer } from "./Page";
 import { Colect } from "./store/Collection";
 const App = () => {
   const { showMenu } = useContext(Colect);
-  console.log(showMenu);
+  
   return (
     <div className="overflow-hidden relative">
       <Navbar />
@@ -17,6 +17,7 @@ const App = () => {
       <Project />
       <Contact />
       <Footer />
+      <SideIcon/>
     </div>
   );
 };
